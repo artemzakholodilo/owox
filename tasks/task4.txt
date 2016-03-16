@@ -1,0 +1,20 @@
+0. Проиндексировал нужные поля.
+
+1. Заказ может иметь в составе несколько разных наименований товаров, каждого наименования также может быть более одного. - Так и не понял вторую часть вопроса, первая вроде как уже была реализована
+
+2. SET autocommit = 0;
+
+   start transaction;
+
+   INSERT INTO `orders`(id, client_id, product_id, amount, created) 
+               VALUES(1, 1, 2, '3.64', '2016-03-15');
+
+   commit;
+
+3. SELECT `amount`, `created` FROM `orders` AS `o` LEFT JOIN `clients` as `c` ON 
+               `o`.`client_id`=`c`.id; #from clients
+
+   SELECT `amount`, `created` FROM `orders` AS `o` LEFT JOIN `products` as `p` ON 
+               `o`.`product_id`=`p`.`id`; #from products
+
+4. Вроде +

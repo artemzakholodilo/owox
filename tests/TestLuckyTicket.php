@@ -11,7 +11,7 @@ class TestLuckyTicket extends PHPUnit_Framework_TestCase
 
     public function testTicketsWrongResult()
     {
-        $this->assertNotEquals(10, luckyTickets(2));
+        $this->assertNotEquals(8, luckyTickets(2));
     }
 
     public function testInvalidExceptionThrowed()

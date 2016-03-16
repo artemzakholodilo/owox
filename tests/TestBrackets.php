@@ -2,7 +2,7 @@
 
 require_once(__DIR__ . "/../tasks/task1.php");
 
-class TestBrackets extends PHPUnit_Framework_TestCase
+class TestBrackets extends \PHPUnit_Framework_TestCase
 {
     private $correctBrackets = '[5] * 3 - ( 4 - 7 * [3-6])';
 
