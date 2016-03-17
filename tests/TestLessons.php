@@ -2,14 +2,6 @@
 
 namespace Tasks\tests;
 
-/*
-require_once '../tasks/task3/Lesson.php';
-require_once '../tasks/task3/Grammar.php';
-require_once '../tasks/task3/Speaking.php';
-require_once '../Tasks/task3/Strategy/CostStrategy.php';
-require_once '../tasks/task3/Strategy/TimeStrategy.php';
-require_once '../tasks/task3/Strategy/FixedStrategy.php';
-*/
 use \Tasks\task3\Grammar;
 use \Tasks\task3\Speaking;
 use \Tasks\task3\Strategy\FixedStrategy;
@@ -17,6 +9,9 @@ use \Tasks\task3\Strategy\TimeStrategy;
 
 class TestLessons extends \PHPUnit_Framework_TestCase
 {
+    /**
+     * @return bool
+     */
     public function testLessonsGrammarFixedCostGood()
     {
         $cost = $grammar = null;
@@ -27,6 +22,9 @@ class TestLessons extends \PHPUnit_Framework_TestCase
         $this->assertEquals(400, $cost);
     }
 
+    /**
+     * @return bool
+     */
     public function testLessonsSpeakingTimedCostGood()
     {
         $cost = $spaeking = null;
@@ -37,6 +35,9 @@ class TestLessons extends \PHPUnit_Framework_TestCase
         $this->assertEquals(600, $cost);
     }
 
+    /**
+     * @return bool
+     */
     public function testLessonsGrammarTimedCostBad()
     {
         $cost = $grammar = null;

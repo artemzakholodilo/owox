@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @param $k int
+ * @return int|number
+ */
 function luckyTickets($k)
 {
     if ($k % 2 !== 0) {

@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @param $sstring
+ * @return bool
+ */
 function checkBrackets($s) {
     $stack = array();
     $length = strlen($s);
